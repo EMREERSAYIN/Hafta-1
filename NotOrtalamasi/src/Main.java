@@ -1,39 +1,23 @@
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
 
-      int mat, fizik, kimya, türkçe, tarih, müzik;
+public class KDV {
+  public static void main(String[] args) {
+    //KDV Hesaplama - KDV Calculation
 
-
-      Scanner inp = new Scanner(System.in);
-
-      System.out.print("Matematik Notunuz : ");
-      mat = inp.nextInt();
-
-      System.out.print("Fizik Notunuz : ") ;
-      fizik = inp.nextInt();
-
-      System.out.print("Kimya Notunuz : ");
-      kimya = inp.nextInt();
-
-      System.out.print("Türkçe Notunuz : ");
-      türkçe = inp.nextInt();
-
-      System.out.print("Tarih Notunuz : ");
-      tarih = inp.nextInt();
-
-      System.out.print("Müzik Notunuz : ");
-      müzik = inp.nextInt();
-
-      int toplam = (mat + fizik + kimya + türkçe + tarih + müzik);
-      double ortalama = toplam / 6.0;
-      System.out.println("Not Ortalaması = " + ortalama );
-
-      boolean kosul1 = ortalama >= 60;
-
-      String gecti = (kosul1) ? "Sınıfı Geçtin :) " : "Sınıfta Kaldın :(";
-      System.out.println(gecti);
-
+    Scanner input= new Scanner(System.in);
+    double total=0, kdv=0;
+    System.out.println("Enter the fee amount:");
+    total=input.nextDouble();
+    kdv=total;
+    if (total<=1000 && total>0)
+    {
+      kdv += (total*0.18);
+      System.out.println("Price: "+total+" KDV %18: "+kdv);
     }
+    else{
+      kdv += (total*0.8);
+      System.out.println("Price: "+total+" KDV %8: "+kdv);
+    }
+  }
 }
