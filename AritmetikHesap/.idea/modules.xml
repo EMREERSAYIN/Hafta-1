@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/IslemOnceligi.iml" filepath="$PROJECT_DIR$/IslemOnceligi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AritmetikHesap.iml" filepath="$PROJECT_DIR$/AritmetikHesap.iml" />
     </modules>
   </component>
 </project>
