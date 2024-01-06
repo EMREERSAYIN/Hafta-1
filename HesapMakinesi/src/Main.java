@@ -1,49 +1,38 @@
-
 import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
-        int a, b, islem, sonuc;
+        String userName,password;
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("İlk sayıyı giriniz : ");
-        a = input.nextInt();
-        System.out.print("İkinci sayıyı giriniz : ");
-        b = input.nextInt();
+        Scanner userInfo = new Scanner(System.in);
 
-        System.out.print("1) Topla\n2) Çıkar\n3) Çarp\n4) Böl\n" +
-                "Yapmak istediğiniz işlemi seçiniz : ");
-        islem = input.nextInt();
+        System.out.println("User Name : ");
+        userName = userInfo.nextLine();
 
-        switch (islem) {
-            case 1:
-                sonuc = a+b;
-                System.out.println("sonuç = " + sonuc);
-                break;
+        System.out.println("Password : ");
+        password = userInfo.nextLine();
 
-            case 2:
-                sonuc = a-b;
-                System.out.println("sonuc = " + sonuc);
-                break;
+        if (userName.equals("patika") && password.equals("java123")) {
+            System.out.println("Login succesful! ");
+        } else {
+            System.out.println("Login failed. Wrong input. ");
 
-            case 3:
-                sonuc = a*b;
-                System.out.println("sonuç = " + sonuc);
-                break;
+            // Ask the user if they want to reset the password
+            System.out.println("Do you want to reset your password? (yes/no): ");
+            String resetOption = userInfo.nextLine();
 
-            case 4:
-                switch (b) {
-                    case 0:
-                        System.out.println("0'dan farklı sayı girin!");
-                        break;
-                    default:
-                        sonuc = a/b;
-                        System.out.println("sonuç = " + sonuc);
+            if (resetOption.equals("yes")) {
+                // Reset password logic
+                System.out.println("Enter your new password: ");
+                String newPassword = userInfo.nextLine();
+
+                // Check if the new password is different from the incorrect password
+                if (!newPassword.equals(password)) {
+                    System.out.println("Password created!");
+                } else {
+                    System.out.println("Password could not be created. Please enter another password.");
                 }
-                break;
-
-            default:
-                System.out.println("lütfen 1-4 arası sayılarından birini seçiniz");
+            }
         }
     }
-}
