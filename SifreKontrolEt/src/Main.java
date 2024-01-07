@@ -17,6 +17,6 @@ public class Main {
         } else {
             System.out.println("Kullanıcı Adı veya parola Yanlış!!!");
 
-            }
         }
     }
+}

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SifreKontrol.iml" filepath="$PROJECT_DIR$/SifreKontrol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SifreKontrolEt.iml" filepath="$PROJECT_DIR$/SifreKontrolEt.iml" />
     </modules>
   </component>
 </project>
