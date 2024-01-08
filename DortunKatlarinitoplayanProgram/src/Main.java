@@ -4,9 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
         int x,toplam=0;
+
         Scanner input = new Scanner(System.in);
         System.out.println("Sayı Girin: ");
         x= input.nextInt();
+
         for(int i =1; i <=x; i++){
             if(i%4==0){
                 System.out.println(i);
